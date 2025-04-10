@@ -18,6 +18,26 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
         fetchPosts()
 
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshPosts), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+        
+        self.title = "Tumblr Feed"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+
+    @objc func refreshPosts() {
+        fetchPosts()
+        tableView.refreshControl?.endRefreshing()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,6 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let post = posts[indexPath.row]
 
         cell.summaryLabel.text = post.summary
+        cell.backgroundColor = UIColor.systemGray6
 
         if let photo = post.photos.first {
             let url = photo.originalSize.url
@@ -38,6 +59,11 @@ class ViewController: UIViewController, UITableViewDataSource {
 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: nil)
+    }
+
 
     func fetchPosts() {
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork/posts/photo?api_key=1zT8CiXGXFcQDyMFG7RtcfGLwTdDjFUJnZzKJaWTmgyK4lKGYk")!
