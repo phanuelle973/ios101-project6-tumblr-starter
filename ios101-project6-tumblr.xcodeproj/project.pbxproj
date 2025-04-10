@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32412F8C2DA6DA68003F6578 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32412F8B2DA6DA68003F6578 /* DetailViewController.swift */; };
+		32412F902DA74971003F6578 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32412F8F2DA74971003F6578 /* DetailViewController.swift */; };
 		ED54EF4D29D5382800B6AD22 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54EF4C29D5382800B6AD22 /* String+Extensions.swift */; };
 		ED59161029BC307D000F25AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59160F29BC307D000F25AE /* AppDelegate.swift */; };
 		ED59161229BC307D000F25AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59161129BC307D000F25AE /* SceneDelegate.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		32412F8B2DA6DA68003F6578 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		32412F8F2DA74971003F6578 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		ED54EF4C29D5382800B6AD22 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		ED59160C29BC307D000F25AE /* ios101-project6-tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios101-project6-tumblr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED59160F29BC307D000F25AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 				ED59160F29BC307D000F25AE /* AppDelegate.swift */,
 				ED59161129BC307D000F25AE /* SceneDelegate.swift */,
 				ED59161329BC307D000F25AE /* ViewController.swift */,
-				32412F8B2DA6DA68003F6578 /* DetailViewController.swift */,
+				32412F8F2DA74971003F6578 /* DetailViewController.swift */,
 				ED59162529BC4CC8000F25AE /* PostCell.swift */,
 				ED59162329BC4921000F25AE /* Post.swift */,
 				ED59161529BC307D000F25AE /* Main.storyboard */,
@@ -161,10 +161,10 @@
 				ED59161429BC307D000F25AE /* ViewController.swift in Sources */,
 				ED59161029BC307D000F25AE /* AppDelegate.swift in Sources */,
 				ED59161229BC307D000F25AE /* SceneDelegate.swift in Sources */,
+				32412F902DA74971003F6578 /* DetailViewController.swift in Sources */,
 				ED59162429BC4921000F25AE /* Post.swift in Sources */,
 				ED54EF4D29D5382800B6AD22 /* String+Extensions.swift in Sources */,
 				ED59162629BC4CC8000F25AE /* PostCell.swift in Sources */,
-				32412F8C2DA6DA68003F6578 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -76,6 +76,16 @@ class ViewController: UIViewController, UITableViewDataSource {
                 print("❌ Error decoding JSON: \(error.localizedDescription)")
             }
         }
+
         session.resume()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail",
+           let detailVC = segue.destination as? DetailViewController,
+           let indexPath = tableView.indexPathForSelectedRow {
+            
+            let selectedPost = posts[indexPath.row]
+            detailVC.post = selectedPost
+        }
     }
 }

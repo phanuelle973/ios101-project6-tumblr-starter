@@ -1,4 +1,12 @@
 //
+//  DetailViewController 2.swift
+//  ios101-project6-tumblr
+//
+//  Created by Phanuelle Manuel on 4/9/25.
+//
+
+
+//
 //  DetailViewController.swift
 //  ios101-project6-tumblr
 //
@@ -10,12 +18,7 @@ import Nuke
 import Foundation
 
 class DetailViewController: UIViewController {
-    
-//    init(textView: UITextView!, imageView: UIImageView!) {
-//        self.textView = textView
-//        self.imageView = imageView
-//    }
-    
+        
     var post: Post!
     
     @IBOutlet weak var textView: UITextView!
